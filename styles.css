@@ -89,6 +89,68 @@ body {
   margin-top: 0;
 }
 
+.article-hero {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+}
+
+.article-hero h1,
+.article-hero p {
+  max-width: 70ch;
+}
+
+.article-hero h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.article-page {
+  padding: 3rem 0 4rem;
+}
+
+.article {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 32px 70px rgba(15, 23, 42, 0.1);
+}
+
+.article h2,
+.article h3 {
+  margin-top: 2rem;
+}
+
+.article h2 {
+  margin-top: 0;
+}
+
+.article p {
+  margin: 1rem 0;
+  max-width: 75ch;
+}
+
+.article .meta {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 0 1.5rem;
+}
+
+.article-back {
+  margin-top: 1.5rem;
+}
+
+.article-back a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.article-back a:hover {
+  text-decoration: underline;
+}
+
 .site-footer {
   text-align: center;
   padding: 1.5rem 0;
