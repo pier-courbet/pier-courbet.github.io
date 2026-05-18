@@ -93,6 +93,14 @@ body {
   margin-top: 0;
 }
 
+/* "Ce que tu trouveras sur ce site" cards display in one row*/
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
 .article-hero {
   padding: 4rem 0 3rem;
   background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
