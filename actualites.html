@@ -26,16 +26,19 @@
     <section class="blog-intro">
       <h2>Actualités</h2>
       <p>Les dernières actualités technocritiques.</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Rechercher parmi les articles..." class="search-input">
+      </div>
     </section>
 
-    <section class="blog-list">
-      <article class="blog-card">
-        <h3><a href="article-1.html">Titre de l’article 1</a></h3>
+    <section class="blog-list" id="blogList">
+      <article class="blog-card" data-title="Titre de l'article 1" data-content="Résumé court de l'article pour donner envie de lire.">
+        <h3><a href="article-1.html">Titre de l'article 1</a></h3>
         <p class="meta">Publié le 17 mai 2026</p>
-        <p>Résumé court de l’article pour donner envie de lire.</p>
+        <p>Résumé court de l'article pour donner envie de lire.</p>
       </article>
 
-      <article class="blog-card">
+      <article class="blog-card" data-title="Titre de l'article 2" data-content="Résumé court du second article.">
         <h3><a href="article-2.html">Titre de l’article 2</a></h3>
         <p class="meta">Publié le 15 mai 2026</p>
         <p>Résumé court du second article.</p>
@@ -43,8 +46,30 @@
     </section>
   </main>
 
+  <p> </p>
+
   <footer class="site-footer">
     <p>© 2026 Technocritiques</p>
   </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+
+      blogCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        const content = card.getAttribute('data-content').toLowerCase();
+
+        if (title.includes(searchTerm) || content.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
